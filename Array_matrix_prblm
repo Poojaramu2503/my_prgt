@@ -1,0 +1,29 @@
+import java.util.*;
+class matrix{
+    public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        int rows = sc.nextInt();
+        int cols= sc.nextInt();
+        int[][] arr = new int[rows][cols];
+        for(int i =0; i<rows; i++){
+            for(int j =0; j<cols; j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
+System.out.println("enter rev row:");
+        int revrow = sc.nextInt();
+        for(int j =0; j<3/2; j++){
+            int temp = arr[revrow][j];
+            arr[revrow][j]=arr[revrow][3-j-1];
+            arr[revrow][3-j-1]=temp;
+        }
+        for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    System.out.print(arr[i][j] + " ");
+                }
+                System.out.println();
+        }
+            
+        
+    }
+}
